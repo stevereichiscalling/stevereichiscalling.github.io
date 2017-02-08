@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <title></title>
 </head>
 <body>
   <div class="video-container">
-    <video id="video-left" src="./video.mp4" autoplay="true"></video>
-    <video id="video-right" src="./video.mp4" autoplay="true"></video>
+    <video id="video-left" class="unfocus" src="./video.mp4" poster="./cover.jpg" loop playsinline muted></video>
+    <video id="video-right" src="./video.mp4" poster="./cover.jpg" loop muted></video>
+    <div id="volume-text">
+        <button id="start-button">Turn volume on and tap to start</button>
+    </div>
+
   </div>
   <script type="text/javascript" src="./bundle.js"></script>
 </body>
