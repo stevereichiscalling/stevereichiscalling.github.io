@@ -46,8 +46,24 @@
 
 	var Tone = __webpack_require__(1);
 
-	var vid = document.getElementById("video-right");
-	vid.playbackRate = 0.99;
+	function onEnded(that){
+	  that.play();
+	  that.className = "shake shake-constant";
+	  setTimeout(function(){
+	    that.className = "";
+	  }.bind(that), 300);
+	}
+
+	var rightVid = document.getElementById("video-right");
+	rightVid.playbackRate = 0.99;
+	rightVid.addEventListener('ended', function(){
+	  onEnded(this);
+	});
+
+	var leftVid = document.getElementById("video-left");
+	leftVid.addEventListener('ended', function(){
+	  onEnded(this);
+	});
 
 	var left = new Tone.Panner(-1).toMaster();
 	var right = new Tone.Panner(1).toMaster();
@@ -63,7 +79,7 @@
 	  rightPlayer.buffer = leftPlayer.buffer;
 	  leftPlayer.start();
 	  rightPlayer.start();
-	})
+	});
 
 /***/ },
 /* 1 */
