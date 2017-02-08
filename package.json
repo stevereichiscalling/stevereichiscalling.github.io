@@ -1,0 +1,15 @@
+{
+  "name": "iphone_phase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch main.js bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tone": "^0.9.0"
+  }
+}
