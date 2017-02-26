@@ -2,12 +2,16 @@
   font-family: SanFranciscoDisplay;
   font-weight: bold;
   src: url("./SanFranciscoDisplay-Bold.otf") format("opentype");
+  src: url("./SanFranciscoDisplay-Bold.otf") format("woff");
+  src: url("./SanFranciscoDisplay-Bold.otf") format("woff2");
 }
 
 @font-face {
   font-family: SanFranciscoText;
   font-weight: normal;
   src: url("./SanFranciscoText-Medium.otf") format("opentype");
+  src: url("./SanFranciscoText-Medium.woff") format("woff");
+  src: url("./SanFranciscoText-Medium.woff") format("woff2");
 }
 
 body {
@@ -169,6 +173,7 @@ body {
     margin: 0 15px 10px;
     padding: 15px 20px;
     position: relative;
+    z-index: 102;
 }
 
 .message.to {
