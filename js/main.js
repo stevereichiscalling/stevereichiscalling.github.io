@@ -33,7 +33,7 @@ var infoBox = document.getElementById("info-box");
 var closeButton = document.getElementById("close-icon");
 
 closeButton.addEventListener("touchend", function(){
-  infoBox.style.opacity = "0";
+  infoBox.style.display = "none";
   infoBox.style.zIndex = "0";
   leftVid.className = "";
 });
@@ -105,7 +105,7 @@ function draw(){
   if(dist/canvas.width > 0.512){
     // window.location = "http://www.sethkranzler.com";
     dist = 0.512 * canvas.width;
-    infoBox.style.opacity = "1";
+    infoBox.style.display = "block";
     noButton.style.opacity = "0";
     closeButton.style.zIndex = "101";
     leftVid.className = "unfocus";

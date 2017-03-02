@@ -7,8 +7,14 @@
 </head>
 <body>
   <div class="video-container">
-    <video id="video-left" class="unfocus" src="./media/video.mp4" poster="./images/cover.jpg" loop playsinline muted></video>
-    <video id="video-right" src="./media/video.mp4" poster="./images/cover.jpg" loop muted></video>
+    <div class="video-left">
+      <img class="iphone-left" src="./images/iphone.png"/>
+      <video id="video-left" class="unfocus" src="./media/video.mp4" poster="./images/cover.jpg" loop playsinline muted></video>
+    </div>
+    <div class="video-right">
+      <img class="iphone-right" src="./images/iphone.png"/>
+      <video id="video-right" src="./media/video.mp4" poster="./images/cover.jpg" loop muted></video>
+    </div>
     <img class="slide-icons" id="no-icon" src="./images/no_icon.png"/>
     <img class="slide-icons" id="phone-icon" src="./images/phone_icon.png"/>
     <canvas class="slide-icons" id="touch-detector"></canvas>
@@ -24,6 +30,9 @@
       </div>
     </div>
   </div> 
+  <div class="info-desktop">
+    Designed by <a href="http://www.sethkranzler.com">Seth Kranzler</a> in New York City
+  </div>
     <div id="start-button-container">
         <input type="image" id="start-button" src="./images/icon.png"/>
     </div>
