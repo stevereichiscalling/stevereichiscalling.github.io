@@ -35,6 +35,7 @@ var closeButton = document.getElementById("close-icon");
 closeButton.addEventListener("touchend", function(){
   infoBox.style.opacity = "0";
   infoBox.style.zIndex = "0";
+  leftVid.className = "";
 });
 
 
@@ -98,12 +99,16 @@ function draw(){
     dist = 0;
   }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(answerButton, dist, 0, canvas.width, canvas.height);
+  if(leftVid.className == ""){
+    ctx.drawImage(answerButton, dist, 0, canvas.width, canvas.height);
+  }
   if(dist/canvas.width > 0.512){
     // window.location = "http://www.sethkranzler.com";
     dist = 0.512 * canvas.width;
     infoBox.style.opacity = "1";
+    noButton.style.opacity = "0";
     closeButton.style.zIndex = "101";
+    leftVid.className = "unfocus";
   }
 }
 
