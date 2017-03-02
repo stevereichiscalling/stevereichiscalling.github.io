@@ -9,9 +9,11 @@ var left = new Tone.Panner(-1).toMaster();
 var right = new Tone.Panner(1).toMaster();
 
 var leftPlayer = new Tone.Player("./media/ring.mp3").connect(left);
+leftPlayer.volume.value = -6;
 leftPlayer.loop = true;
 
 var rightPlayer = new Tone.Player().connect(right);
+rightPlayer.volume.value = -6;
 rightPlayer.loop = true;
 rightPlayer.playbackRate = 0.99;
 
