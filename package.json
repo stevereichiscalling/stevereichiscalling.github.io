@@ -5,11 +5,16 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch --optimize-minimize ./js/main.js ./js/bundle.js"
+    "build": "webpack build ./js/main.js --output-path ./dist --mode=production",
+    "dev": "webpack build ./js/main.js --output-path ./dist --watch --mode=development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tone": "^0.9.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
   }
 }

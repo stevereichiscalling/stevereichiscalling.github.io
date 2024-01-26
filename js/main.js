@@ -32,6 +32,8 @@ var answerButton = document.getElementById("phone-icon");
 var noButton = document.getElementById("no-icon");
 var infoBox = document.getElementById("info-box");
 var message = document.getElementById("message-url");
+var videoContainer = document.querySelector(".video-container");
+
 
 var closeButton = document.getElementById("close-icon");
 
@@ -55,7 +57,7 @@ button.addEventListener("click", function(){
   rightPlayer.start();
   rightVid.play();
   leftVid.play();
-  leftVid.className = "";
+  videoContainer.classList.remove('unfocus');
   button.style.display = "none";
   
   noButton.style.opacity = "1";
@@ -113,7 +115,7 @@ function draw(){
     message.style.display = "block";
     noButton.style.opacity = "0";
     closeButton.style.zIndex = "101";
-    leftVid.className = "unfocus";
+    // leftVid.className = "unfocus";
   }
 }
 
